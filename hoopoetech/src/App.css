@@ -51,6 +51,7 @@
   align-items: center;
   justify-content: center;
   color: #ffffff;
+  text-shadow: 0 0 10px rgba(187, 187, 187, 0.626), 0 0 20px rgba(108, 108, 108, 0.3);
 }
 
 .cursor {
@@ -211,7 +212,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   width: 100%;
   border-radius: 8px;
   transition: height 1.5s ease-out;
-  box-shadow: 0 -2px 10px rgba(168, 168, 168, 0.4);
+  box-shadow: 0 -2px 10px rgba(131, 131, 131, 0.4);
 }
 
 .bar-value {
