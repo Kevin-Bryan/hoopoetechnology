@@ -47,6 +47,50 @@ function TypewriterText() {
   );
 }
 
+function ResultsChart() {
+  const [animatedValues, setAnimatedValues] = useState([0, 0, 0, 0, 0]);
+  
+  const chartData = [
+    { label: 'Efficiency Gain', value: 85, color: '#eeeeee' },
+    { label: 'Cost Reduction', value: 60, color: '#cccccc' },
+    { label: 'Time Saved', value: 75, color: '#dddddd' },
+    { label: 'Revenue Growth', value: 45, color: '#bbbbbb' },
+    { label: 'Error Reduction', value: 90, color: '#ffffff' }
+  ];
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setAnimatedValues(chartData.map(item => item.value));
+    }, 300); // Start animation after 300ms
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <div className="chart-container">
+      <h2 className="chart-title">How Our AI Solutions Transform Businesses</h2>
+      <div className="custom-bar-chart">
+        {chartData.map((item, index) => (
+          <div key={index} className="bar-item">
+            <div className="bar-label">{item.label}</div>
+            <div className="bar-wrapper">
+              <div 
+                className="bar-fill" 
+                style={{
+                  height: `${animatedValues[index]}%`,
+                  backgroundColor: item.color,
+                  transitionDelay: `${index * 0.1}s`
+                }}
+              ></div>
+            </div>
+            <div className="bar-value">{item.value}%</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function App() {
   return (
     <div className="App">
@@ -54,12 +98,14 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo_NoBackground" />
         <p className="Logo-text">Hoopoe Tech</p>
-      </header>
-
-      <div className="Typewriter-Container">
+      </header>      <div className="Typewriter-Container">
         <TypewriterText/>
       </div>      
       
+      <div className="App-Results">
+        <ResultsChart />
+      </div>
+
       <div className="App-AboutUs">
         <h2 className="AboutUs-title">About Hoopoe Tech</h2>
         <p className="AboutUs-text">
@@ -74,8 +120,7 @@ function App() {
         </p>
         <p className="AboutUs-text">
           Partner with us to redefine what's possible. Together, we'll build the future of intelligent business 
-          automation—one breakthrough at a time.
-        </p>
+          automation—one breakthrough at a time.        </p>
       </div>
     </div>
   );
