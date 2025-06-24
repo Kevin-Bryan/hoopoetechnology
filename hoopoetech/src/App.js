@@ -302,9 +302,7 @@ function App() {
       </div>
 
       <SignUpSection />
-
-
-  
+      </div>
   );
 }
 
