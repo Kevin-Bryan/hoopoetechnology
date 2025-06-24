@@ -1,5 +1,6 @@
 import './App.css';
 import { useState, useEffect } from 'react';
+import logo from './logo.svg';
 
 const GOOGLE_APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzmwQD3mj9j5oUlnH9kguL5CN_ddbzqZ975-XS2sdwL4yxWFERY7spQzQi62a2gA4qC/exec";
 

@@ -1,9 +1,0 @@
-{}
-{
-  "dependencies": {
-    "@heroicons/react": "^1.0.6",
-    "@tailwindcss/cli": "^4.1.10",
-    "lucide-react": "^0.522.0",
-    "tailwindcss": "^4.1.10"
-  }
-}
