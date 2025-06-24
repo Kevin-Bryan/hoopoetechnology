@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import './index.css';
 
-
 const stats = [
   { label: "Hours Saved/Month", value: 40, type: "text", suffix: "+" },
   { label: "Active AI Assistants", value: 1000, type: "text", suffix: "+" },
@@ -76,7 +75,7 @@ const StatsUI = () => {
   }, []);
 
   return (
-    <div className="relative h-screen bg-black text-white flex items-center justify-center overflow-hidden">
+    <div className="relative h-screen bg-black text-white [text-shadow:0_0_10px_rgba(187,187,187,0.626),0_0_20px_rgba(108,108,108,0.3)] flex items-center justify-center overflow-hidden" id="why-us">
       <svg ref={svgRef} className="absolute w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
         <defs>
           <linearGradient id="circleGradient" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -103,19 +102,19 @@ const StatsUI = () => {
       </div>
 
       <div className="absolute w-full h-full flex flex-col items-center justify-center">
-        <div ref={statRefs.current[0]} className="absolute mb-48 left-4 sm:left-16 md:top-40 md:left-40 flex flex-col items-center bg-gradient-to-r from-gray-900 to-gray-400 rounded-lg p-4 border-cyan-300">
+        <div ref={statRefs.current[0]} className="absolute mb-48 left-4 sm:left-16 md:top-40 md:left-40 flex flex-col items-center rounded-lg p-4">
           <div className="text-4xl md:text-6xl font-bold">
             {animatedValues[0].toLocaleString()}{stats[0].suffix}
           </div>
           <p className="mt-2 text-sm md:text-lg font-medium">{stats[0].label}</p>
         </div>
-        <div ref={statRefs.current[1]} className="absolute mb-48 right-4 sm:right-16 md:top-40 md:right-40 flex flex-col items-center bg-gradient-to-r rounded-lg from-gray-900 to-gray-400 p-4">
+        <div ref={statRefs.current[1]} className="absolute mb-48 right-4 sm:right-16 md:top-40 md:right-40 flex flex-col items-center p-4">
           <div className="text-4xl md:text-6xl font-bold">
             {animatedValues[1].toLocaleString()}{stats[1].suffix}
           </div>
           <p className="mt-2 text-sm md:text-lg font-medium">{stats[1].label}</p>
         </div>
-        <div ref={statRefs.current[2]} className="absolute mt-48 sm:bottom-16 md:bottom-24 flex flex-col items-center bg-gradient-to-r rounded-lg from-gray-900 to-gray-400 p-4">
+        <div ref={statRefs.current[2]} className="absolute mt-48 sm:bottom-16 md:bottom-24 flex flex-col items-center p-4">
           <div className="text-4xl md:text-6xl font-bold">
             {animatedValues[2].toLocaleString()}%
           </div>
