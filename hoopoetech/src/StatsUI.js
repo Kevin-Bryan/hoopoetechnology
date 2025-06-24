@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import './index.css';
-import { ReactComponent as AiIcon } from "./ai icon.svg";
+
 
 const stats = [
   { label: "Hours Saved/Month", value: 40, type: "text", suffix: "+" },
