@@ -104,12 +104,12 @@ function FeaturesGrid() {
         }
       `}</style>
       
-      <div className="bg-black min-h-screen flex items-center justify-center">
+      <div className="bg-black min-h-screen flex items-center justify-center" id="features">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 max-w-7xl">
           {features.map((feature, index) => (
             <div
               key={feature.title}
-              className={`feature-${index} bg-gray-900 text-center p-6 rounded-lg border border-gray-800 shadow-md transition duration-300 hover:border-white hover:shadow-[0_0_20px_5px_rgba(255,255,255,0.5)]`}
+              className={`feature-${index} bg-gradient-to-b from-[#000000] to-[#5c5c5c]  text-center p-6 rounded-lg border border-gray-800 shadow-md transition duration-300 hover:border-white hover:shadow-[0_0_20px_5px_rgba(255,255,255,0.5)]`}
             >
               <div className="mb-4">
                 <feature.icon
