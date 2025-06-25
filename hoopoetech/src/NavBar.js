@@ -42,7 +42,7 @@ export default function NavBar(props) {
             duration={500}
             onClick={handleClick}
           >
-            Why-us?
+            Why us?
           </Link>
         </li>
         <li>
